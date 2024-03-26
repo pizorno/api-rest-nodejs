@@ -1,10 +1,12 @@
 import fastify from 'fastify'
 import { env } from './env'
-import { transactionsRoute } from './routes/transactions'
+import { transactionsRoutes } from './routes/transactions'
 
 const app = fastify()
 
-app.register(transactionsRoute)
+app.register(transactionsRoutes, {
+  prefix: 'transactions',
+})
 
 app
   .listen({

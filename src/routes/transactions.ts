@@ -3,7 +3,7 @@ import { z } from 'zod'
 import { randomUUID } from 'node:crypto'
 import { knex } from '../database'
 
-export async function transactionsRoute(app: FastifyInstance) {
+export async function transactionsRoutes(app: FastifyInstance) {
   app.post('/', async (request, reply) => {
     const createTransactionSchema = z.object({
       title: z.string(),
