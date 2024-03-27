@@ -5,8 +5,8 @@ import { app } from '../src/app'
 
 describe('# Transactions Routes', () => {
   beforeEach(() => {
-    execSync("npm run knex -- migrate:rollback --all")
-    execSync("npm run knex -- migrate:latest")
+    execSync('npm run knex -- migrate:rollback --all')
+    execSync('npm run knex -- migrate:latest')
   })
 
   beforeAll(async () => {
